@@ -1,11 +1,21 @@
 'use strict';
 
 import React from 'react';
+import MenuBar from './MenuBar'
 
 export default class TimelogLibrary extends React.Component {
     render() {
         return (
-            <h1>Timelog-Library</h1>
+            <div className="ui grid">
+                <div className="two column row">
+                    <div className="column">
+                        <MenuBar/>
+                    </div>
+                    <div className="column">
+                          <h1>Timelog</h1>
+                    </div>
+                </div>
+            </div>
         )
     }
 }
