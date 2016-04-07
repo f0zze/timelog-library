@@ -2,7 +2,7 @@
 
 import React from 'react';
 import MenuBar from './MenuBar'
-import Button from './Button'
+import Button from './components/Button'
 
 export default class TimelogLibrary extends React.Component {
     render() {

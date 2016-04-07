@@ -1,7 +1,8 @@
 import React from 'react';
 
 
-export default class Button extends React.Component {
+export default class Button{
+
     render() {
         return (
             <button>
@@ -10,3 +11,5 @@ export default class Button extends React.Component {
         )
     }
 }
+
+
