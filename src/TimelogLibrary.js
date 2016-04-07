@@ -13,7 +13,7 @@ export default class TimelogLibrary extends React.Component {
                         <MenuBar/>
                     </div>
                     <div className="eight wide column">
-                        <h1>Timelog</h1>
+                        {this.props.children}
                     </div>
                 </div>
             </div>

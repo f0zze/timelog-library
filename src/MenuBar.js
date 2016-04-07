@@ -1,6 +1,7 @@
 'use strict';
 import React from 'react';
 import categories from './data/categoryies';
+import {Link} from 'react-router';
 
 export default class MenuBar extends React.Component {
     render() {
@@ -11,19 +12,19 @@ export default class MenuBar extends React.Component {
         )
     }
 
-    createSubCategory(subcategories) {
+    createSubCategory(category, subcategories) {
         return subcategories.map(sc=> {
-            return <a className="item">{sc.name}</a>
+            return <Link to={`/${category.toLowerCase()}/${sc.name.toLowerCase()}`} key={sc.name} className="item">{sc.name}</Link>
         });
     }
 
     createCategory() {
         return categories.map(category=> {
             return (
-                <div className="item">
+                <div key={category.name} className="item">
                     <div className="header">{category.name}</div>
                     <div className="menu">
-                        {this.createSubCategory(category.subcategories)}
+                        {this.createSubCategory(category.name, category.subcategories)}
                     </div>
                 </div>
             )
