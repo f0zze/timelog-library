@@ -4,6 +4,7 @@ import {Provider} from 'react-redux';
 import {createStore,applyMiddleware} from 'redux';
 import {Router, Route, Link, browserHistory } from 'react-router';
 import reducers from './reducers';
+import Store from './state/configureStore'
 
 import TimelogLibrary from './TimelogLibrary';
 import Color from './renameme/style/Color';
