@@ -1,11 +1,11 @@
-import React from 'react';
+import React,{ PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { changeColor } from '../../actions/index';
 
 class Color extends React.Component {
     render() {
-        console.log(this.props);
+        console.log(this.props.color);
         return (
             <div>
                 <h1>
@@ -21,12 +21,18 @@ class Color extends React.Component {
     }
 }
 
+Color.propTypes = {
+};
+
+
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({changeColor}, dispatch);
 }
 
 function mapStateToProps({color}) {
-    return {color}
+    return {
+        color:color.color
+    }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Color);

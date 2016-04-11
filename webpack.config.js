@@ -13,6 +13,7 @@ module.exports = {
       loader: 'babel'
     }]
   },
+  devtool:"cheap-source-map",
   resolve: {
     extensions: ['', '.js', '.jsx']
   },

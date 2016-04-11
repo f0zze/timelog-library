@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 import {createStore,applyMiddleware} from 'redux';
 import {Router, Route, Link, browserHistory } from 'react-router';
 import reducers from './reducers';
-import Store from './state/configureStore'
+import Store from './state/main-store'
 
 import TimelogLibrary from './TimelogLibrary';
 import Color from './renameme/style/Color';
@@ -12,7 +12,7 @@ import Color from './renameme/style/Color';
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 ReactDOM.render((
-    <Provider store={createStoreWithMiddleware(reducers)}>
+    <Provider store={createStoreWithMiddleware(reducers,Store)}>
         <Router history={browserHistory}>
             <Route path="/" component={TimelogLibrary}>
                 <Route path="style/color" component={Color}/>

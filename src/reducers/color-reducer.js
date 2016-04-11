@@ -1,6 +1,6 @@
 'use strict';
 
-import {COLOR_CHANGE} from '../actions'
+import {COLOR_CHANGE} from '../actions';
 
 export default (state = '', action)=> {
     switch (action.type) {
