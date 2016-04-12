@@ -6,7 +6,7 @@ import {Link} from 'react-router';
 export default class MenuBar extends React.Component {
     render() {
         return (
-            <div className="ui vertical menu">
+            <div className="ui vertical inverted sidebar menu left overlay visible">
                 {this.createCategory()}
             </div>
         )

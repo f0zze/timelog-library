@@ -1,3 +1,7 @@
+import ButtonDemo from '../components/button/ButtonDemo';
+import ButtonOptions from '../components/button/ButtonOptions';
+
+
 export default [
     {
         name: 'Style',
@@ -51,7 +55,11 @@ export default [
         subcategories: [
             {
                 name: 'Buttons',
-                link: '/'
+                link: '/',
+                component: {
+                    demo: ButtonDemo,
+                    options: ButtonOptions
+                }
             },
             {
                 name: 'Forms',
